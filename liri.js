@@ -1,6 +1,13 @@
 require("dotenv").config();
 var keys = require("./keys.js");
+var request = require('request');
+var fs = require('fs');
+var Spotify = require('node-spotify-api');
 
+var spotify = new Spotify(keys.spotify);
+
+var command = process.argv[2];
+var input = process.argv[3];
 // 9. Make it so liri.js can take in one of the following commands:
 
 //    * `concert-this`
